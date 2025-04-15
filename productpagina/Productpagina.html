@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productpagina</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <section class="hero">
+        <div class="overlay">
+            <h1>WeBuild Producten</h1>
+            <p>Ontdek onze producten</p>
+            <button class="btn" onclick="scrollToModels()">Bekijk</button>
+        </div>
+    </section>
+
+    <section id="models-section" class="models">
+        <h2>Onze Uitgelichte Producten</h2>
+        <div class="gallery">
+            <!-- Product 1: Houten Plank -->
+            <div class="product">
+                <img src="plank.png" alt="Houten plank" style="width: 100%; height: auto;">
+                <h3>Houten Plank Gezaagd</h3>
+                <p>Een houten plank gezaagd in het aangegeven formaat</p>
+                <form action="/bestelling" method="POST">
+                    <label for="plank-format">Formaat:</label>
+                    <select id="plank-format" name="format" required>
+                        <option value="50x100">8 x 50 cm</option>
+                        <option value="60x100">8 x 60 cm</option>
+                        <option value="90x100">8 x 90 cm</option>
+                        <option value="120x100">8 x 120 cm</option>
+                    </select>
+                    <br><br>
+                    <label for="plank-quantity">Aantal:</label>
+                    <input type="number" id="plank-quantity" name="quantity" min="1" max="100" required>
+                    <br><br>
+                    <button type="submit" class="btn btn-small">Bestellen</button>
+                </form>
+            </div>
+
+            <!-- Product 2: Gereedschapskist -->
+            <div class="product">
+                <img id="kist-image" src="klein.png" alt="Gereedschapskist" style="width: 100%; height: auto;">
+                <h3>Gereedschapskist</h3>
+                <p>Kies het formaat en aantal onderdelen van uw gereedschapskist</p>
+                <form action="/bestelling" method="POST">
+                    <label for="kist-format">Aantal Onderdelen:</label>
+                    <select id="kist-format" name="format" required>
+                        <option value="52" data-image="klein.png">52 onderdelen</option>
+                        <option value="73" data-image="middel.png">73 onderdelen</option>
+                        <option value="196" data-image="groot.png">196 onderdelen</option>
+                    </select>
+                    <br><br>
+                    <label for="kist-quantity">Aantal:</label>
+                    <input type="number" id="kist-quantity" name="quantity" min="1" max="100" required>
+                    <br><br>
+                    <button type="submit" class="btn btn-small">Bestellen</button>
+                </form>
+            </div>
+        </div>
+         <!-- Product 3: LijmPistool -->
+         <div class="product">
+            <img id="kist-image" src="lijmpistool.png" alt="lijm" style="width: 100%; height: auto;">
+            <h3>Lijmpistool</h3>
+            <p>maki lijmpistool voor uw klusjes</p>
+            <form action="/bestelling" method="POST">
+                <label for="kist-quantity">Aantal:</label>
+                <input type="number" id="kist-quantity" name="quantity" min="1" max="100" required>
+                <br><br>
+                <button type="submit" class="btn btn-small">Bestellen</button>
+            </div>
+
+                
+
+    <script>
+       
+        document.getElementById('kist-format').addEventListener('change', function () {
+            const selectedOption = this.options[this.selectedIndex];
+            const newImage = selectedOption.getAttribute('data-image');
+            document.getElementById('kist-image').src = newImage;
+        });
+
+        
+        function scrollToModels() {
+            document.getElementById('models-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #121212;
+    color: white;
+    background-image: url('achtergrond we build.png');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+/* Navigatielinks */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+    margin-left: 130px;
+    position: relative;
+    z-index: 3;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-links button {
+    background-color: transparent;
+    font-family: sans-serif;
+    color: white;
+    border: 2px solid transparent;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    z-index: 2;
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-links i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+.nav-links a{
+    text-decoration: none;
+    color: white;
+}
+.nav-links button:hover {
+    background-color: rgba(165, 42, 42, 0.521);
+    border-color: white;
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+/* Navigatie klaar */
+.nav-links button:hover i {
+    transform: scale(1.2);
+}
+/* Navigatie klaar */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.logo {
+    width: 50px;
+    transform-origin: top center;
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    max-width: 800px; 
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.8);
+    border: 1px solid white; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(1, 1, 1, 1); 
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6; 
+    color: white; 
+}
+
+h1 {
+    font-size: 24px;
+    color: white;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #007bff;
+
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+.add-project {
+    margin-top: 20px;
+}
+
+.add-project input[type="text"],
+.add-project textarea,
+.add-project input[type="datetime-local"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.add-project button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-project button:hover {
+    background-color: #0056b3;
+}

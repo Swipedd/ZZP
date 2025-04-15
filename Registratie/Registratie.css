@@ -1,0 +1,85 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+body{
+    margin: 0px;
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid 2px black ;
+}
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+input:focus{
+    outline: 5px;
+}
+input[type=submit]{
+    transition: color 0.3s ease-in-out;
+    background-color: #654321;
+    color: white;
+}
+input[type=submit]:hover{
+    color: black;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+.radiobuttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.radiobuttons label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 60px;
+    width: 300px;
+    background-color: lightskyblue;
+}
+input[type=radio]{
+
+}
+.radiobuttons label.vrouwen {
+    background-color: lightpink;
+}
+b{
+    text-align: center;
+    margin-bottom: 20px;
+    /* Zet deze in PHP */
+    /* padding: 10px; */
+    /* border: solid 1px; */
+    border-radius: 5px;
+}
+a{
+    color:#654321;
+}
+a:visited{
+    color: #654321;
+}

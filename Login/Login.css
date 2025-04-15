@@ -1,0 +1,121 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+body{
+    margin: 0px;
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+form {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    max-width: 400px;
+    height: 360px;
+    margin: 0 auto;
+    margin-top: 90px;
+    padding: 25px;
+    padding-bottom: 100px;
+    padding-top: 50px;
+    border: solid 3px black;
+    border-radius: 10px;
+    background-color: white; 
+}
+form:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 60px 0 rgba(255, 0, 0, 0.19);
+}
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+label {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+    background: white;
+}
+input {
+    width: 360px;
+    padding: 15px 20px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+}
+input:focus + label,
+input:valid + label {
+    top: -5px;
+    left: 15px;
+    font-size: 12px;
+    color: #654321;
+    z-index: 1;
+    font-weight: bold;
+    background-color: white;
+}
+
+input[id=password]{
+    margin-bottom: 30px;
+}
+input[type=submit]{
+    width: 400px;
+    margin-bottom: 30px;
+    transition: color 0.3s ease-in-out;
+    background-color: #654321;
+    color: white;
+}
+input[type=submit]:hover{
+    color: black;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+a{
+    font-weight: 20px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: black;
+}
+a:visited{
+    color: black;
+}
+a:hover{
+    color: #654321;
+}
+h1{
+    text-align: center;
+    margin-bottom: 35px;
+}
+b{
+    text-align: center;
+    margin-bottom: 20px;
+    /* Zet deze in PHP */
+    /* padding: 10px; */
+    /* border: solid 1px; */
+    border-radius: 5px;
+}
+button#togglePassword {
+    position: absolute;
+    font-size: 14px;
+    z-index: 3;
+    top: 340px;
+    right: 580px;
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.3s ease-in-out;
+}
+
+button#togglePassword:hover {
+    color: rgba(165, 42, 42, 0.8);
+}

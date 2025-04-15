@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --pink: mediumseagreen;
+}
+
+body {
+    font-family: Lato, sans-serif;
+    color: black;
+    background-color: #f9f9f9;
+}
+
+
+#navbar {
+    width: 100vw;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 3px;
+    border-radius: 3%;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+    padding-right: 15em;
+    position: relative;
+    transition: all ease-in-out 250ms;
+}
+
+li a::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 0.4em;
+    width: 0%;
+    background-color: mediumspringgreen;
+    bottom: -1em;
+    transition: all ease-in-out 250ms;
+}
+
+li a:hover::after {
+    width: 28%;
+}
+
+li a:hover {
+    color: black;
+}
+
+
+
+.hero {
+    height: 85vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #654321;
+}
+
+/* Modellen-sectie */
+.models {
+    padding: 1rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.models h2 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+
+.gallery {
+    display: flex;
+    justify-content: center; /* Centraal uitlijnen van de producten */
+    gap: 1.5rem; /* Ruimte tussen de items */
+    flex-wrap: wrap; /* Meerdere rijen toestaan als nodig */
+    margin: 0 auto;
+    max-width: 1200px; /* Beperkt de breedte zodat het er netjes uitziet */
+}
+
+.product {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: calc(20% - 1.5rem); /* Zorgt ervoor dat 5 producten naast elkaar passen */
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+/* Responsief ontwerp voor kleinere schermen */
+@media (max-width: 1024px) {
+    .product {
+        width: calc(33.33% - 1.5rem); /* 3 producten per rij */
+    }
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 1.5rem); /* 2 producten per rij */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: 100%; /* 1 product per rij */
+    }
+}
+
+.product h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.product p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column; 
+        gap: 1rem;
+    }
+
+    .product {
+        width: 100%; 
+        max-width: 100%; 
+        height: auto; 
+    }
+
+    .product img {
+        max-height: 200px; 
+    }
+}
+
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}

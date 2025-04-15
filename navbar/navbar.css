@@ -1,0 +1,176 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+    margin-left: 130px;
+    position: relative;
+    z-index: 3;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.nav-links button {
+    background-color: transparent;
+    font-family: sans-serif;
+    color: white;
+    border: 2px solid transparent;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    z-index: 2;
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-links button:hover {
+    background-color: rgba(165, 42, 42, 0.521);
+    border-color: white;
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+
+.nav-links button:hover i {
+    transform: scale(1.2);
+}
+
+.nav-links i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.logo {
+    width: 50px;
+    transform-origin: top center;
+    position: relative;
+    z-index: 2;
+}
+
+.company-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    letter-spacing: 3px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.company-name span {
+    opacity: 0;
+    display: inline-block;
+    animation: letterAppear 1.1s forwards;
+    animation-delay: calc(0.9s * var(--i));
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.logo {
+    width: 50px;
+    transform-origin: top center;
+    position: relative;
+    z-index: 2;
+}
+
+.company-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    letter-spacing: 3px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.company-name span {
+    opacity: 0;
+    display: inline-block;
+    animation: letterAppear 1.1s forwards;
+    animation-delay: calc(0.9s * var(--i));
+}
+
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+    25% {
+        transform: rotate(20deg) translateY(20px);
+    }
+    50% {
+        transform: rotate(0deg) translateY(40px);
+    }
+    75% {
+        transform: rotate(-20deg) translateY(20px);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0);
+    }
+}
+
+@keyframes letterAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.hammer.swing {
+    animation: swing 0.5s ease-in-out 3;
+}
+
+.company-name.visible {
+    opacity: 1;
+}
